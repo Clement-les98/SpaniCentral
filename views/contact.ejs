@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+   <title>Contact Us | SpaniCentral</title>
+   <link rel="icon" type="image/png" href="/uploads/logo.png">
+
+<meta
+name="description"
+content="Contact SpaniCentral for enquiries, support and partnership opportunities.">
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="/css/contact.css">
+
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    
+    <%- include("partials/navbar") %>
+    <!-- Hero -->
+
+    <section class="contact-hero">
+
+        <h1>Contact Us</h1>
+
+        <p>
+
+            Have a question, suggestion or business enquiry?
+            We'd love to hear from you.
+
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact-container">
+
+        <!-- Contact Information -->
+
+        <div class="contact-info">
+
+            <h2>Get in Touch</h2>
+
+            <p>
+
+                Our team is always ready to assist you with any questions
+                regarding jobs, internships, learnerships or graduate
+                programmes.
+
+            </p>
+
+            <div class="info-box">
+
+                <h3>📍 Address</h3>
+
+                <p>
+
+                    Pretoria<br>
+
+                    Gauteng<br>
+
+                    South Africa
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>📧 Email</h3>
+
+                <p>
+
+                   spanicentral.co.za
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+
+                    +27 761687946
+
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>🕒 Office Hours</h3>
+
+                <p>
+
+                    Monday - Friday<br>
+
+                    08:00 - 17:00
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Contact Form -->
+
+        <div class="contact-form">
+
+            <h2>Send us a Message</h2>
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                    id="name"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    id="email"
+                    required>
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    id="subject"
+                    required>
+
+                <textarea
+                    rows="8"
+                    placeholder="Write your message..."
+                    id="message"
+                    required></textarea>
+
+                <button
+                    type="submit">
+
+                    Send Message
+
+                </button>
+
+            </form>
+          <p id="responseMessage"></p>
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="faq">
+
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-grid">
+
+            <div class="faq-card">
+
+                <h3>Is SpaniCentral free?</h3>
+
+                <p>
+
+                    Yes. Job seekers can browse and apply for jobs
+                    completely free.
+
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <h3>How often are jobs updated?</h3>
+
+                <p>
+
+                    New opportunities are posted regularly as they become
+                    available.
+
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <h3>Can employers advertise vacancies?</h3>
+
+                <p>
+
+                    Yes. Employers are welcome to contact us to advertise
+                    opportunities.
+
+                </p>
+
+            </div>
+
+            <div class="faq-card">
+
+                <h3>I found an expired job.</h3>
+
+                <p>
+
+                    Please notify us and we'll review the listing promptly.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <%- include("partials/footer") %>
+
+    
+     <script src="/js/contact.js"></script>
+
+</body>
+
+</html>

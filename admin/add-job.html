@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+
+    body {
+      background: #f4f6f8;
+      font-family: Arial, sans-serif;
+    }
+
+    .admin-container {
+      width: 90%;
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .admin-container h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0a66c2;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+
+      background: #0a66c2;
+      color: white;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #004182;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="admin-container">
+
+    <h1>Upload Job</h1>
+
+    <form
+      id="jobForm"
+      enctype="multipart/form-data">
+
+      <!-- JOB TITLE -->
+
+      <div class="form-group">
+
+        <label>Job Title</label>
+
+        <input
+          type="text"
+          id="title"
+          required>
+
+      </div>
+
+      <!-- COMPANY -->
+
+      <div class="form-group">
+
+        <label>Company</label>
+
+        <input
+          type="text"
+          id="company"
+          required>
+
+      </div>
+
+      <!-- LOCATION -->
+
+      <div class="form-group">
+
+        <label>Location</label>
+
+        <input
+          type="text"
+          id="location"
+          required>
+
+      </div>
+
+      <!-- JOB TYPE -->
+
+      <div class="form-group">
+
+        <label>Job Type</label>
+
+        <select id="type">
+
+          <option>Internship</option>
+
+          <option>Job</option>
+
+          <option>Learnership</option>
+
+          <option>Entry-Level-Job</option>
+
+          <option>Graduate%20Programme</option>
+
+        </select>
+
+      </div>
+
+      <!-- QUALIFICATION -->
+
+      <div class="form-group">
+
+        <label>Qualification Requirements</label>
+
+        <textarea id=qualification></textarea>
+      </div>
+
+      <!-- SALARY -->
+
+      <div class="form-group">
+
+        <label>Salary / Stipend</label>
+
+        <input
+          type="text"
+          id="salary">
+
+      </div>
+
+      <!-- EXPERIENCE -->
+
+      <div class="form-group">
+
+        <label>Experience Level</label>
+
+        <input type="text" id="experience_level">
+      </div>
+
+      <!-- WORK MODE -->
+
+      <div class="form-group">
+
+        <label>Work Mode</label>
+
+        <select id="work_mode">
+
+          <option>On-site</option>
+
+          <option>Remote</option>
+
+          <option>Hybrid</option>
+
+        </select>
+
+      </div>
+
+      <!-- CLOSING DATE -->
+
+      <div class="form-group">
+
+        <label>Closing Date</label>
+
+        <input
+          type="date"
+          id="closing_date">
+
+      </div>
+
+      <!-- APPLICATION EMAIL -->
+
+      <div class="form-group">
+
+        <label>Application Email</label>
+
+        <input
+          type="email"
+          id="application_email">
+
+      </div>
+
+      <!-- APPLY LINK -->
+
+      <div class="form-group">
+
+        <label>Application Link</label>
+
+        <input
+          type="text"
+          id="apply_link">
+
+      </div>
+
+      <!-- LOGO -->
+
+      <div class="form-group">
+
+        <label>Company Logo</label>
+
+        <input
+          type="file"
+          id="company_logo"
+          accept="image/*">
+
+           <br><br>
+
+  <img
+    id="logoPreview"
+    width="120">
+
+      </div>
+
+      <!-- DESCRIPTION -->
+
+      <div class="form-group">
+
+        <label>Description</label>
+
+        <textarea
+          id="description"></textarea>
+
+      </div>
+
+      <!-- BUTTON -->
+
+      <button type="submit"
+         id="submitBtn">
+
+        Upload Job
+
+      </button>
+
+    </form>
+
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+
+</body>
+</html>

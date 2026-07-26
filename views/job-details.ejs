@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Job Details | SpaniCentral</title>
+    <link rel="icon" type="image/png" href="/uploads/logo.png">
+
+<meta
+name="description"
+content="View job requirements, qualifications and application details on SpaniCentral.">
+
+ 
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+     <%- include("partials/navbar") %>
+
+    <div class="job-container">
+
+        <!-- Header -->
+
+        <div class="job-header">
+
+            <img
+                id="companyLogo"
+                class="company-logo">
+
+            <h1 id="jobTitle"></h1>
+
+            <h3 id="companyName"></h3>
+
+            <p id="jobLocation"></p>
+
+            <div class="badges">
+
+                <span id="jobType" class="badge"></span>
+
+                <span id="workMode" class="badge"></span>
+
+                <span id="experience" class="badge"></span>
+
+            </div>
+
+        </div>
+
+        <!-- Overview -->
+
+        <div class="overview">
+
+            <div class="info-card">
+
+                <h4>Salary</h4>
+
+                <p id="salary"></p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h4>Qualification</h4>
+
+                <p id="qualification"></p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h4>Closing Date</h4>
+
+                <p id="closingDate"></p>
+
+            </div>
+
+        </div>
+
+        <!-- Description -->
+
+        <div class="section">
+
+            <h2>Job Description</h2>
+
+            <p id="description"></p>
+
+        </div>
+
+        <!-- Application -->
+
+        <div class="section">
+
+            <h2>Application Information</h2>
+
+            <p>
+
+                <strong>Email:</strong>
+
+                <span id="applicationEmail"></span>
+
+            </p>
+
+            <button
+                id="applyBtn"
+                class="apply-btn">
+
+                Apply Now
+
+            </button>
+
+        </div>
+
+    </div>
+      <%- include("partials/footer") %>
+    <script src="/js/job-details.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Admin Dashboard</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+    }
+
+    /* SIDEBAR */
+
+    .sidebar {
+
+      width: 250px;
+      height: 100vh;
+
+      background: #0a66c2;
+
+      color: white;
+
+      padding: 20px;
+
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin: 20px 0;
+    }
+
+    .sidebar ul li a {
+
+      color: white;
+      text-decoration: none;
+
+      font-size: 16px;
+
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      opacity: 0.7;
+    }
+
+    /* MAIN CONTENT */
+
+    .main-content {
+
+      margin-left: 250px;
+
+      width: calc(100% - 250px);
+
+      padding: 30px;
+    }
+
+    /* TOP BAR */
+
+    .topbar {
+
+      background: white;
+
+      padding: 20px;
+
+      border-radius: 12px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+
+      margin-bottom: 30px;
+    }
+
+    .topbar h1 {
+      font-size: 24px;
+    }
+
+    /* DASHBOARD CARDS */
+
+    .cards {
+
+      display: grid;
+
+      grid-template-columns:
+      repeat(auto-fit, minmax(220px, 1fr));
+
+      gap: 20px;
+
+      margin-bottom: 30px;
+    }
+
+    .card {
+
+      background: white;
+
+      padding: 25px;
+
+      border-radius: 12px;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .card p {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0a66c2;
+    }
+
+    /* TABLE */
+
+    .jobs-table {
+
+      background: white;
+
+      padding: 20px;
+
+      border-radius: 12px;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    table {
+
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin-top: 20px;
+    }
+
+    table th,
+    table td {
+
+      padding: 14px;
+
+      text-align: left;
+
+      border-bottom: 1px solid #ddd;
+    }
+
+    table th {
+      background: #f5f5f5;
+    }
+
+    /* BUTTONS */
+
+    .btn {
+
+      padding: 8px 14px;
+
+      border: none;
+
+      border-radius: 6px;
+
+      cursor: pointer;
+
+      color: white;
+
+      font-size: 13px;
+    }
+
+    .edit-btn {
+      background: #ff9800;
+    }
+
+    .delete-btn {
+      background: #e53935;
+    }
+
+    .add-btn {
+
+      background: #0a66c2;
+
+      padding: 10px 18px;
+
+      border-radius: 8px;
+
+      text-decoration: none;
+
+      color: white;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+
+  <div class="sidebar">
+
+    <h2>IspaniHub</h2>
+
+    <ul>
+
+      <li>
+        <a href="#">Dashboard</a>
+      </li>
+
+      <li>
+        <a href="/admin/add-job">
+          Add Job
+        </a>
+      </li>
+
+    <li>
+        <button onclick="logout()">
+
+   Logout
+
+    </button>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+
+  <div class="main-content">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+      <h1>Admin Dashboard</h1>
+
+      <a
+        href="/admin/add-job"
+        class="add-btn">
+
+        + Add Job
+
+      </a>
+
+    </div>
+
+    
+
+    <!-- JOB TABLE -->
+
+   <div class="jobs-section">
+
+  <h2>Manage Jobs</h2>
+
+  <table>
+
+    <thead>
+
+      <tr>
+        <th>Title</th>
+        <th>Company</th>
+        <th>Location</th>
+        <th>Type</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+
+    </thead>
+
+    <tbody id="jobsTableBody">
+
+    </tbody>
+
+  </table>
+
+</div>
+  </div>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

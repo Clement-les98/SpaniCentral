@@ -1,0 +1,53 @@
+.page-header{
+
+    background:#0a66c2;
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.policy-container{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 20px;
+
+    line-height:1.8;
+
+}
+
+.policy-container h2{
+
+    color:#0a66c2;
+
+    margin-top:40px;
+
+}
+
+.policy-container ul{
+
+    padding-left:20px;
+
+}
+
+.policy-container li{
+
+    margin-bottom:12px;
+
+}
+
+@media(max-width:768px){
+
+    .page-header{
+
+        padding:50px 20px;
+
+    }
+
+}
