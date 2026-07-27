@@ -98,7 +98,12 @@ app.get("/disclaimer", (req, res) => {
     res.render("disclaimer");
 
 });
-
+app.get("/ping", (req, res) => {
+    res.json({
+        success: true,
+        message: "Server is alive"
+    });
+});
 //page not found
 
 app.use((req, res) => {
