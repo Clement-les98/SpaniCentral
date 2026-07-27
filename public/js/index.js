@@ -2,11 +2,8 @@ let allJobs = [];
 
 async function loadJobs() {
 
-  const response =
-    await fetch(
-      "http://localhost:5000/api/jobs"
-    );
-
+ const response =
+    await fetch("/api/jobs");
   allJobs =
     await response.json();
 

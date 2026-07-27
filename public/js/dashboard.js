@@ -17,7 +17,7 @@ async function loadJobs() {
 
     const response =
     await fetch(
-        "http://localhost:5000/api/jobs?page=1&limit=10000"
+       "/api/jobs?page=1&limit=10000"
     );
 
 const data =
@@ -158,15 +158,15 @@ form.addEventListener("submit", async (e) => {
   );
 
  let url =
-  "http://localhost:5000/api/jobs";
+  "/api/jobs";
 
 let method =
   "POST";
 
 if (jobId) {
 
-  url =
-    `http://localhost:5000/api/jobs/${jobId}`;
+ url =
+    `/api/jobs/${jobId}`;
 
   method =
     "PUT";
@@ -219,11 +219,9 @@ const jobId =
 async function loadJob(id) {
 
   try {
-
-    const response = await fetch(
-      `http://localhost:5000/api/jobs/${id}`
-    );
-
+const response = await fetch(
+  `/api/jobs/${id}`
+);
     const job = await response.json();
 
     document.getElementById("title").value =
@@ -269,7 +267,7 @@ async function loadJob(id) {
       document.getElementById(
         "logoPreview"
       ).src =
-        `http://localhost:5000/${job.company_logo}`;
+       `/${job.company_logo}`;
 
     }
 
@@ -300,10 +298,9 @@ async function deleteJob(id) {
   if (!confirmed) return;
 
   try {
-
-    await fetch(
-      `http://localhost:5000/api/jobs/${id}`,
-      {
+await fetch(
+  `/api/jobs/${id}`,
+  {
         method: "DELETE"
       }
     );
@@ -324,9 +321,9 @@ async function deleteJob(id) {
 
     await fetch(
 
-        "http://localhost:5000/api/auth/logout",
+    "/api/auth/logout",
 
-        {
+    {
 
             method:"POST",
 

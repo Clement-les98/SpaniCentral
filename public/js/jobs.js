@@ -19,13 +19,10 @@ const search = params.get("search") || "";
 
 // Load Jobs
 async function loadJobs(page = 1) {
-
-    currentPage = page;
-
-    try {
+  try {
 
         let url =
-            `http://localhost:5000/api/jobs?page=${page}&limit=${limit}`;
+           `/api/jobs?page=${page}&limit=${limit}`;
 
         if (type) {
 
@@ -34,6 +31,9 @@ async function loadJobs(page = 1) {
             document.getElementById("pageTitle").textContent = type;
 
         }
+    currentPage = page;
+
+  
 
         if (search) {
 

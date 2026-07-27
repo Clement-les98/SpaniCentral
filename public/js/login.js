@@ -17,7 +17,7 @@ form.addEventListener(
 
       const response =
         await fetch(
-          "http://localhost:5000/api/auth/login",
+          ("/api/login"),
           {
 
             method: "POST",

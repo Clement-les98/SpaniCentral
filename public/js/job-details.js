@@ -12,7 +12,7 @@ async function loadJob() {
 
   const response =
     await fetch(
-      `http://localhost:5000/api/jobs/${jobId}`
+      `/api/jobs/${jobId}`
     );
 
   const job =
@@ -66,8 +66,8 @@ function displayJob(job) {
     document.getElementById("applicationEmail").textContent =
         job.application_email || "Not Provided";
 
-    document.getElementById("companyLogo").src =
-        `http://localhost:5000/${job.company_logo}`;
+   document.getElementById("companyLogo").src =
+    `/${job.company_logo}`;
 
     document.getElementById("applyBtn").onclick = () => {
 
