@@ -132,6 +132,15 @@ app.get("/db-test", (req, res) => {
 
     });
 });
+
+app.get("/env-test", (req, res) => {
+    res.json({
+        DB_HOST: process.env.DB_HOST,
+        DB_NAME: process.env.DB_NAME,
+        DB_USER: process.env.DB_USER,
+        JWT_SECRET: process.env.JWT_SECRET ? "SET" : "NOT SET"
+    });
+});
 /* TEST ROUTE */
 
 /*app.get("/", (req, res) => {
