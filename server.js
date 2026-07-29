@@ -112,6 +112,26 @@ app.use((req, res) => {
 
 });
 
+const db = require("./config/db"); // Adjust the path if needed
+
+app.get("/db-test", (req, res) => {
+    db.query("SELECT 1 AS test", (err, results) => {
+
+        if (err) {
+            console.error(err);
+            return res.status(500).json({
+                success: false,
+                error: err.message
+            });
+        }
+
+        res.json({
+            success: true,
+            results
+        });
+
+    });
+});
 /* TEST ROUTE */
 
 /*app.get("/", (req, res) => {
