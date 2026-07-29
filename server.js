@@ -104,12 +104,14 @@ app.get("/ping", (req, res) => {
         message: "Server is alive"
     });
 });
-//page not found
 
-app.use((req, res) => {
-
-    res.status(404).render("404");
-
+app.get("/env-test", (req, res) => {
+    res.json({
+        DB_HOST: process.env.DB_HOST,
+        DB_NAME: process.env.DB_NAME,
+        DB_USER: process.env.DB_USER,
+        JWT_SECRET: process.env.JWT_SECRET ? "SET" : "NOT SET"
+    });
 });
 
 const db = require("./config/db"); // Adjust the path if needed
@@ -133,14 +135,17 @@ app.get("/db-test", (req, res) => {
     });
 });
 
-app.get("/env-test", (req, res) => {
-    res.json({
-        DB_HOST: process.env.DB_HOST,
-        DB_NAME: process.env.DB_NAME,
-        DB_USER: process.env.DB_USER,
-        JWT_SECRET: process.env.JWT_SECRET ? "SET" : "NOT SET"
-    });
+
+//page not found
+
+app.use((req, res) => {
+
+    res.status(404).render("404");
+
 });
+
+
+
 /* TEST ROUTE */
 
 /*app.get("/", (req, res) => {
