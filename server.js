@@ -110,7 +110,10 @@ app.get("/env-test", (req, res) => {
         DB_HOST: process.env.DB_HOST,
         DB_NAME: process.env.DB_NAME,
         DB_USER: process.env.DB_USER,
-        JWT_SECRET: process.env.JWT_SECRET ? "SET" : "NOT SET"
+         PASSWORD_EXISTS: !!process.env.DB_PASSWORD,
+        PASSWORD_LENGTH: process.env.DB_PASSWORD
+            ? process.env.DB_PASSWORD.length
+            : 0
     });
 });
 
