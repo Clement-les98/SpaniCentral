@@ -10,3 +10,4 @@ router.get("/login", (req, res) => {
     res.sendFile(filePath);
 
 });
+module.exports = router;
