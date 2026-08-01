@@ -99,15 +99,15 @@ app.get("/disclaimer", (req, res) => {
 
 });
 
-router.get("/login", (req, res) => {
+app.get("/login", (req, res) => {
     res.render("admin/login");
 });
 
-router.get("/dashboard", verifyToken, (req, res) => {
+app.get("/dashboard", verifyToken, (req, res) => {
     res.render("admin/dashboard");
 });
 
-router.get("/add-job", verifyToken, (req, res) => {
+app.get("/add-job", verifyToken, (req, res) => {
     res.render("admin/add-job");
 });
 
