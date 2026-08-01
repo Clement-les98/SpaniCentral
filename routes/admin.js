@@ -8,9 +8,18 @@ router.get("/login", (req, res) => {
 
     const filePath = path.join(__dirname, "../admin/login.html");
 
-    res.json({
-        filePath,
-        exists: fs.existsSync(filePath)
+    res.sendFile(filePath, (err) => {
+
+        if (err) {
+            console.error("sendFile error:", err);
+
+            return res.status(err.statusCode || 500).json({
+                message: err.message,
+                code: err.code,
+                path: filePath
+            });
+        }
+
     });
 
 });
