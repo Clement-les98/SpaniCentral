@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 
+console.log("Admin routes loaded");
+
 const verifyToken =
 require("../middleware/authMiddleware");
 
