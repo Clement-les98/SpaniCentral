@@ -1,10 +1,12 @@
-const express = require("express");
-const router = express.Router();
+router.get("/login", (req, res) => {
 
-console.log("Admin routes loaded");
+    const filePath = path.join(
+        __dirname,
+        "../admin/login.html"
+    );
 
-router.get("/test", (req, res) => {
-    res.send("Admin router is working");
+    console.log(filePath);
+
+    res.sendFile(filePath);
+
 });
-
-module.exports = router;
