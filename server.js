@@ -98,45 +98,6 @@ app.get("/disclaimer", (req, res) => {
     res.render("disclaimer");
 
 });
-app.get("/ping", (req, res) => {
-    res.json({
-        success: true,
-        message: "Server is alive"
-    });
-});
-
-app.get("/env-test", (req, res) => {
-    res.json({
-        DB_HOST: process.env.DB_HOST,
-        DB_NAME: process.env.DB_NAME,
-        DB_USER: process.env.DB_USER,
-         PASSWORD_EXISTS: !!process.env.DB_PASSWORD,
-        PASSWORD_LENGTH: process.env.DB_PASSWORD
-            ? process.env.DB_PASSWORD.length
-            : 0
-    });
-});
-
-const db = require("./config/db"); // Adjust the path if needed
-
-app.get("/db-test", (req, res) => {
-    db.query("SELECT 1 AS test", (err, results) => {
-
-        if (err) {
-            console.error(err);
-            return res.status(500).json({
-                success: false,
-                error: err.message
-            });
-        }
-
-        res.json({
-            success: true,
-            results
-        });
-
-    });
-});
 
 
 //page not found
