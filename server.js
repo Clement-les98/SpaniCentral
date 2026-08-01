@@ -99,6 +99,17 @@ app.get("/disclaimer", (req, res) => {
 
 });
 
+router.get("/login", (req, res) => {
+    res.render("admin/login");
+});
+
+router.get("/dashboard", verifyToken, (req, res) => {
+    res.render("admin/dashboard");
+});
+
+router.get("/add-job", verifyToken, (req, res) => {
+    res.render("admin/add-job");
+});
 
 //page not found
 
