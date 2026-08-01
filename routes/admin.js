@@ -4,21 +4,21 @@ const path = require("path");
 
 const fs = require("fs");
 
+
+
 router.get("/login", (req, res) => {
 
     const filePath = path.join(__dirname, "../admin/login.html");
 
-    res.sendFile(filePath, (err) => {
+    fs.readFile(filePath, "utf8", (err, data) => {
 
         if (err) {
-            console.error("sendFile error:", err);
-
-            return res.status(err.statusCode || 500).json({
-                message: err.message,
-                code: err.code,
-                path: filePath
-            });
+            console.error(err);
+            return res.status(500).json(err);
         }
+
+        res.type("html");
+        res.send(data);
 
     });
 
