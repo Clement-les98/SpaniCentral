@@ -165,16 +165,11 @@ if (jobId) {
 
 }
 
-const response = await fetch(
-  url,
-  {
-    method,
-    headers: {
-      Authorization: `Bearer ${token}`
-    },
-    body: formData
-  }
-);
+const response = await fetch(url, {
+  method,
+  credentials: "include",
+  body: formData
+});
 
 const data =
   await response.json();
