@@ -95,11 +95,10 @@ function displayJobs(jobs) {
 
             <img
 
-                src="http://localhost:5000/${job.company_logo}"
-
-                alt="${job.company}"
-
-                class="company-logo">
+               <img
+    src="/${job.company_logo}"
+    alt="${job.company}"
+    class="company-logo">
 
             <h3>${job.title}</h3>
 
