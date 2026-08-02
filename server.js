@@ -6,8 +6,7 @@ const authRoutes =
   require("./routes/auth");
 
 const jobsRoutes = require("./routes/jobs");
-const adminRoutes =
-require("./routes/admin");
+
 const cookieParser =
 require("cookie-parser");
 const contactRoutes =
@@ -56,7 +55,7 @@ app.use(
     contactRoutes
 
 );
-app.use("/admin", adminRoutes);
+
 //render index.ejs
 app.get("/", (req, res) => {
 
