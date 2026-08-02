@@ -13,6 +13,9 @@ require("cookie-parser");
 const contactRoutes =
 require("./routes/contactRoute");
 
+const verifyToken =
+require("./middleware/authMiddleware");
+
 const app = express();
 // Tell Express to use EJS
 app.set("view engine", "ejs");
