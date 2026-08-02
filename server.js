@@ -101,15 +101,15 @@ app.get("/disclaimer", (req, res) => {
 
 });
 
-app.get("/login", (req, res) => {
+app.get("admin/login", (req, res) => {
     res.render("admin/login");
 });
 
-app.get("/dashboard", verifyToken, (req, res) => {
+app.get("admin/dashboard", verifyToken, (req, res) => {
     res.render("admin/dashboard");
 });
 
-app.get("/add-job", verifyToken, (req, res) => {
+app.get("admin/add-job", verifyToken, (req, res) => {
     res.render("admin/add-job");
 });
 
