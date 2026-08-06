@@ -4,6 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const authRoutes =
   require("./routes/auth");
+  const sitemapRoutes =
+require("./routes/sitemap");
 
 const jobsRoutes = require("./routes/jobs");
 
@@ -55,6 +57,7 @@ app.use(
     contactRoutes
 
 );
+app.use("/", sitemapRoutes);
 
 //render index.ejs
 app.get("/", (req, res) => {
