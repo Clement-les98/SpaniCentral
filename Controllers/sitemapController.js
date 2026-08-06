@@ -18,7 +18,7 @@ exports.generateSitemap = (req, res) => {
 
     // Get all jobs from database
     db.query(
-        "SELECT id, updated_at FROM jobs ORDER BY id DESC",
+        "SELECT id, created_at FROM jobs ORDER BY id DESC",
         (err, jobs) => {
 
             if (err) {
